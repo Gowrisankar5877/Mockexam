@@ -1,0 +1,9 @@
+- name: restart Apache 2 Package
+  tags: apache,apache2,ubuntu
+  apt:
+    name: 
+      - apache2
+      - libapache2-mod-php
+    state: restarted
+  when: apache2.changed
+
